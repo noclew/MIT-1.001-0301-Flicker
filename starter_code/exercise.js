@@ -35,4 +35,16 @@ exercise.buildHtmlForImages = function(data){
     //     use forEach to construct html to
     //     display every image in flickr data
     // ------------------------------------------------
+
+    //console.log(data);
+    //console.log(data.photos.photo[0].url_s);
+
+    var tags = '';
+    data.photos.photo.forEach(function(elm){
+        // document.getElementById('images').appendChild(imgDiv);
+        tags += '<img src="'  +  elm.url_s +'">';
+    });
+    //document.getElementById('images').innerHTML = txt;
+    //console.log(txt)
+    return tags;
 };
